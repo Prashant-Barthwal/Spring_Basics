@@ -9,14 +9,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 @SpringBootApplication
 public class Project2Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Project2Application.class, args);
+  public static void main(String[] args) {
+    SpringApplication.run(Project2Application.class, args);
 
-		ApplicationContext coach= new  ClassPathXmlApplicationContext("auto.xml");
+    ApplicationContext coach = new ClassPathXmlApplicationContext("auto.xml");
 
-		Coach theCoach = coach.getBean("runningCoach",Coach.class);
-		theCoach.getDailyWorkout();
-		
-	}
-
+    Coach theCoach = coach.getBean("runningCoach", Coach.class);
+    theCoach.getDailyWorkout();
+  }
 }
