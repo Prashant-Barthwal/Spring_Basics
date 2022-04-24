@@ -1,5 +1,8 @@
 package com.spring.project1;
 
+import org.springframework.stereotype.Component;
+
+@Component("that silly Coach")
 public class CricketCoach implements Coach {
     
 
