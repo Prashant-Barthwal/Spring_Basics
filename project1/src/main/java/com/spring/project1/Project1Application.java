@@ -9,12 +9,21 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Project1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Project1Application.class, args);
+		//SpringApplication.run(Project1Application.class, args);
 		ApplicationContext context = new ClassPathXmlApplicationContext(
       "cond.xml"
     );
+
+	/*
     Coach theCoach = context.getBean("myCoach", Coach.class);
     theCoach.getDailyWorkout();
+	theCoach.getDailyFortune();
+
+	*/
+	Coach theCoach = context.getBean("myCricketCoach", Coach.class);
+
+	theCoach.getDailyWorkout();
+	theCoach.getDailyFortune();
 	}
 
 }

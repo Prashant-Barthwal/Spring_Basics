@@ -1,7 +1,6 @@
 package com.spring.project1;
-public interface Coach {
-    
 
-    public void getDailyWorkout();
+public interface FortuneService{
+
     public void getDailyFortune();
 }

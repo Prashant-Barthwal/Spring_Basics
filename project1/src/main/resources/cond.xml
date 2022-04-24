@@ -6,9 +6,19 @@
    xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="myCoach" class="com.spring.project1.Swim">
+
+  <bean id="myFortune" class="com.spring.project1.GoodFortune">
         
     </bean>
+    <bean id="myCoach" class="com.spring.project1.Swim">
+        <constructor-arg ref="myFortune" />
+    </bean>
 
-  
+      <bean id="myCricketCoach" class="com.spring.project1.CricketCoach">
+        <property name="fortuneService" ref="myFortune" />
+        <property name="emailAddress" value="prashantbarthwal1234@gmail.com" />
+              <property name="teamName" value="DelhiCapitals" />
+    </bean>
+
+
 </beans>
