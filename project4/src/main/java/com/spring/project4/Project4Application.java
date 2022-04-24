@@ -13,6 +13,7 @@ public class Project4Application {
 
 		Coach theCoach = coach.getBean("runningCoach", Coach.class);
 		theCoach.getDailyWorkout();
+		theCoach.getDetails();
 	}
 
 }
